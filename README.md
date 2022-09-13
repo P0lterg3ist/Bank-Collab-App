@@ -2,6 +2,6 @@
 Collab app project with my groupmates
 
 basically the project me and my groupmates have to produce by the end of the year.
-this is my part so far, it will not be updated, so if I do and more stuff it will be on the group repo
 
-group repo will be hosted on: https://github.com/ethanetexplorer/Loan-Shark.git
+the project will be hosted here since I'm too lazy to set up SSH key or whatever and learn how to make a pull request
+(haha groupmates now YOU do the pulling whatever)
