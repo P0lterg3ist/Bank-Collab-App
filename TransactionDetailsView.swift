@@ -9,6 +9,8 @@ import SwiftUI
 import WrappingHStack
 
 struct TransactionDetailsView: View {
+    
+    @Environment (\.dismiss) var dismiss
 
     var body: some View {
         NavigationView {
