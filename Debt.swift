@@ -13,5 +13,5 @@ struct Debt: Identifiable {
     var collector: String
     var debtor: String
     var debtor2: String
-    var billType: String
+    var appliedTags: [Int]
 }

@@ -8,26 +8,14 @@
 import SwiftUI
 import WrappingHStack
 
-class AllTags: ObservableObject {
-    @Published var tags = [
-        Tag(name: "Bill Split", icon: "square.fill", colour: Color.blue),
-        Tag(name: "Normal", icon: "triangle.fill", colour: Color.green)
-    ]
-    @Published var appliedTags = [
-        Tag(name: "Bill Split", icon: "square.fill", colour: Color.blue),
-        Tag(name: "Normal", icon: "triangle.fill", colour: Color.green)
-    ]
-}
-
 struct HomeView: View {
 
     @State var debts = [
-        Debt(money: 420.69, collector: "Mr. Tan", debtor: "me", debtor2: "Mr. Lee", billType: "Normal"),
-        Debt(money: 32, collector: "Ah Fan", debtor: "me", debtor2: "Mrs. Koo", billType: "Bill Split")
+        Debt(money: 420.69, collector: "Mr. Tan", debtor: "me", debtor2: "Mr. Lee", appliedTags: [1, 3]),
+        Debt(money: 32, collector: "Ah Fan", debtor: "me", debtor2: "Mrs. Koo", appliedTags: [0])
     ]
     @State var searchTerm = ""
     @State var showTransactionDetailsSheet = false
-    @StateObject var tags = AllTags()
     
     var body: some View {
         NavigationView {
@@ -41,22 +29,22 @@ struct HomeView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                     )
                 Section {
-                    WrappingHStack(tags.tags) { tag in
+                    WrappingHStack {
                         ZStack {
                             RoundedRectangle(cornerRadius: 12.5)
-                                .stroke(tag.colour, lineWidth: 1)
+                                .stroke(.blue, lineWidth: 1)
                                 .frame(width: 80, height: 25)
                             Circle()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(tag.colour)
+                                .foregroundColor(.blue)
                                 .padding(.trailing, 56)
-                            Image(systemName: tag.icon)
+                            Image(systemName: "square.fill")
                                 .foregroundColor(.white)
                                 .padding(.trailing, 56)
                                 .font(.system(size: 14))
                                 .padding(.bottom, 1)
-                            Text(tag.name)
-                                .foregroundColor(tag.colour)
+                            Text("Bill Split")
+                                .foregroundColor(.blue)
                                 .font(.caption)
                                 .padding(.leading, 20)
                         }
@@ -71,7 +59,7 @@ struct HomeView: View {
                                 VStack(alignment: .leading) {
                                     Text(debt.collector)
                                         .foregroundColor(.black)
-                                    Text("\(debt.debtor), \(debt.debtor2) - \(debt.billType)")
+                                    Text("\(debt.debtor), \(debt.debtor2) - Tag name")
                                         .font(.caption)
                                         .foregroundColor(.gray)
                                 }

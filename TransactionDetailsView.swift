@@ -9,30 +9,27 @@ import SwiftUI
 import WrappingHStack
 
 struct TransactionDetailsView: View {
-    
-    @Environment (\.dismiss) var dismiss
-    @StateObject var tags = AllTags()
 
     var body: some View {
         NavigationView {
             List {
                 Section(header: Text("TRANSACTION TYPE")) {
-                    WrappingHStack(tags.appliedTags) { tag in
+                    WrappingHStack {
                         ZStack {
                             RoundedRectangle(cornerRadius: 12.5)
-                                .stroke(tag.colour, lineWidth: 1)
+                                .stroke(.blue, lineWidth: 1)
                                 .frame(width: 80, height: 25)
                             Circle()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(tag.colour)
+                                .foregroundColor(.blue)
                                 .padding(.trailing, 56)
-                            Image(systemName: tag.icon)
+                            Image(systemName: "square.fill")
                                 .foregroundColor(.white)
                                 .padding(.trailing, 56)
                                 .font(.system(size: 14))
                                 .padding(.bottom, 1)
-                            Text(tag.name)
-                                .foregroundColor(tag.colour)
+                            Text("Bill Split")
+                                .foregroundColor(.blue)
                                 .font(.caption)
                                 .padding(.leading, 20)
                         }
