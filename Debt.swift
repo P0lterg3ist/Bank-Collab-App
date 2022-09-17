@@ -14,4 +14,5 @@ struct Debt: Identifiable {
     var debtor: String
     var debtor2: String
     var appliedTags: [Int]
+    var daysDueFromNow: Int
 }
