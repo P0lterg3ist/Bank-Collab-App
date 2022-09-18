@@ -114,27 +114,96 @@ struct HomeView: View {
         }
     }
     
-    func dayDifference(notUpdatedDay: Int, notUpdatedMonth: Int) -> Int {
+    func dayDifference(notUpdatedDay: Int, notUpdatedMonth: Int, notUpdatedYear: Int) -> Int {
+        // set date variables
         let date = Date()
         let calendar = Calendar.current
-        let day = calendar.component(.day, from: date), month = calendar.component(.month, from: date)
-        if Int(month) == 1 || Int(month) == 3 || Int(month) == 5 || Int(month) == 7 || Int(month) == 8 || Int(month) == 10 || Int(month) == 12 {
-            let daysInMonth = 31
-        } else if Int(month) == 2 {
-            let year = calendar.component(.year, from: date)
-            if Int(year) % 4 == 0 {
-                if Int(year) % 100 == 0 && Int(year) % 400 != 0 {
-                    let daysInMonth = 28
-                } else {
-                    let daysInMonth = 29
-                }
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        var daysPassedInYear = 0
+        var daysPassedInYearNow = 0
+        var daysInMonth = 0
+        var daysInMonthNow = 0
+        var daysInFeb = 28
+        var daysInFebNow = 28
+        var leapDaysBetween = 0
+        
+        // find out if it's leap year and set daysInFeb and daysInFebNow
+        if year % 4 == 0 {
+            if year % 100 == 0 && year % 400 != 0 {
+                daysInFebNow = 28
+            }
+            daysInFebNow = 29
+        }
+
+        if notUpdatedYear % 4 == 0 {
+            if notUpdatedYear % 100 == 0 && notUpdatedYear % 400 != 0 {
+                daysInFeb = 28
+            }
+            daysInFeb = 29
+        }
+        
+        // find out days in current month
+        if month == 2 {
+            daysInMonthNow = daysInFebNow
+        } else if month != 4 || month != 6 || month != 9 || month != 11 {
+            daysInMonthNow = 30
+        } else {
+            daysInMonthNow = 31
+        }
+
+        if notUpdatedMonth == 2 {
+            daysInMonth = daysInFeb
+        } else if notUpdatedMonth != 4 || notUpdatedMonth != 6 || notUpdatedMonth != 9 || notUpdatedMonth != 11 {
+            daysInMonth = 30
+        } else {
+            daysInMonth = 31
+        }
+        
+        // set daysPassedInYear and daysPassedInYearNow based on day and month
+        if notUpdatedMonth > 1 {
+            if notUpdatedMonth % 2 == 0 {
+                daysPassedInYear = (61 * (notUpdatedMonth - 2)) - daysInMonth + notUpdatedDay + daysInFeb + 31
+            } else {
+                daysPassedInYear = (61 * (notUpdatedMonth - 3)) + notUpdatedDay + daysInFeb + 31
             }
         } else {
-            let daysInMonth = 30
+            daysPassedInYear = notUpdatedDay
         }
-        return 0
+        
+        if month > 1 {
+            if month % 2 == 0 {
+                daysPassedInYearNow = (61 * (month - 2)) - daysInMonthNow + day + daysInFebNow + 31
+            } else {
+                daysPassedInYearNow = (61 * (month - 3)) + day + daysInFebNow + 31
+            }
+        } else {
+            daysPassedInYear = day
+        }
+        
+        // return days that passed since last check
+        if year == notUpdatedYear {
+            return daysPassedInYearNow - daysPassedInYear
+        } else {
+            for year in notUpdatedYear + 1..<year {
+                if year % 4 == 0 {
+                    if year % 100 == 0 && year % 400 != 0 {
+                        leapDaysBetween -= 1
+                    }
+                    leapDaysBetween += 1
+                }
+            }
+            if daysInFeb == 29 {
+                if notUpdatedMonth == 2 && notUpdatedDay <= 28 {
+                    leapDaysBetween += 1
+                } else if notUpdatedMonth == 1  {
+                    leapDaysBetween += 1
+                }
+            }
+            return daysPassedInYearNow - daysPassedInYear + (365 * (year - notUpdatedYear - 1)) + leapDaysBetween
+        }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
