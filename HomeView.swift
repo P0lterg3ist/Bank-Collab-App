@@ -20,11 +20,17 @@ struct HomeView: View {
         Tag(name: "Bill Split", icon: "square.fill", colour: Color.blue),
         Tag(name: "Normal", icon: "triangle.fill", colour: Color.green),
         Tag(name: "Insurance", icon: "dollarsign.circle", colour: Color.red),
-        Tag(name: "Car", icon: "car", colour: Color.orange),
+        Tag(name: "Car Fix", icon: "car", colour: Color.orange),
         Tag(name: "Renovation", icon: "hammer.fill", colour: Color.purple)
     ]
     @State var searchTerm = ""
     @State var showTransactionDetailsSheet = false
+    @State var showAddTransactionSheet = false
+    @State var date = Date()
+    @State var calendar = Calendar.current
+    @AppStorage ("key") var lastCheckedDay = 0
+    @AppStorage ("key") var lastCheckedMonth = 0
+    @AppStorage ("key") var lastCheckedYear = 0
     
     var body: some View {
         NavigationView {
@@ -68,6 +74,7 @@ struct HomeView: View {
                     ForEach(debts) { debt in
                         Button {
                             showTransactionDetailsSheet.toggle()
+                            // decrease debt.daysDueFromNow by dayDifference()
                         } label: {
                             HStack {
                                 VStack(alignment: .leading) {
@@ -111,6 +118,25 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Home")
+            .toolbar {
+                HStack {
+                    Button {
+                        showAddTransactionSheet.toggle()
+                    } label: {
+                        Image(systemName: "plus.app")
+                    }
+                    Button {
+                        print("filter search")
+                    } label: {
+                        Image(systemName: "line.3.horizontal.decrease.circle")
+                    }
+                    .sheet(isPresented: $showAddTransactionSheet) {
+                        AddTransactionView()
+                    }
+                }
+                .font(.system(size: 23))
+                .padding(.top, 90)
+            }
         }
     }
     
