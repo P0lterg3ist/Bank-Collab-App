@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D93F236428CF76C10057F79E /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F236328CF76C10057F79E /* TransactionDetailsView.swift */; };
+		D93F236628CF85020057F79E /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F236528CF85020057F79E /* Tag.swift */; };
+		D9A6A18A28CDD8B100A2E7F8 /* Banker_Collab_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6A18928CDD8B100A2E7F8 /* Banker_Collab_AppApp.swift */; };
+		D9A6A18C28CDD8B100A2E7F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6A18B28CDD8B100A2E7F8 /* ContentView.swift */; };
+		D9A6A18E28CDD8B200A2E7F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A6A18D28CDD8B200A2E7F8 /* Assets.xcassets */; };
+		D9A6A19128CDD8B300A2E7F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A6A19028CDD8B300A2E7F8 /* Preview Assets.xcassets */; };
+		D9A6A19828CDDA3800A2E7F8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6A19728CDDA3800A2E7F8 /* HomeView.swift */; };
+		D9A6A19A28CDDB0100A2E7F8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6A19928CDDB0100A2E7F8 /* ContactsView.swift */; };
+		D9A6A19C28CDE0A200A2E7F8 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6A19B28CDE0A200A2E7F8 /* Debt.swift */; };
+		D9AABC5928D82942006AA8FF /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AABC5828D82942006AA8FF /* AddTransactionView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D93F236328CF76C10057F79E /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
+		D93F236528CF85020057F79E /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		D9A6A18628CDD8B100A2E7F8 /* Banker Collab App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banker Collab App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A6A18928CDD8B100A2E7F8 /* Banker_Collab_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banker_Collab_AppApp.swift; sourceTree = "<group>"; };
+		D9A6A18B28CDD8B100A2E7F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9A6A18D28CDD8B200A2E7F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9A6A19028CDD8B300A2E7F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9A6A19728CDDA3800A2E7F8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D9A6A19928CDDB0100A2E7F8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		D9A6A19B28CDE0A200A2E7F8 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
+		D9AABC5828D82942006AA8FF /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9A6A18328CDD8B100A2E7F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9A6A17D28CDD8B100A2E7F8 = {
+			isa = PBXGroup;
+			children = (
+				D9A6A18828CDD8B100A2E7F8 /* Banker Collab App */,
+				D9A6A18728CDD8B100A2E7F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9A6A18728CDD8B100A2E7F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9A6A18628CDD8B100A2E7F8 /* Banker Collab App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9A6A18828CDD8B100A2E7F8 /* Banker Collab App */ = {
+			isa = PBXGroup;
+			children = (
+				D9A6A18928CDD8B100A2E7F8 /* Banker_Collab_AppApp.swift */,
+				D9A6A18B28CDD8B100A2E7F8 /* ContentView.swift */,
+				D9A6A19928CDDB0100A2E7F8 /* ContactsView.swift */,
+				D9A6A19728CDDA3800A2E7F8 /* HomeView.swift */,
+				D9AABC5828D82942006AA8FF /* AddTransactionView.swift */,
+				D93F236328CF76C10057F79E /* TransactionDetailsView.swift */,
+				D93F236528CF85020057F79E /* Tag.swift */,
+				D9A6A19B28CDE0A200A2E7F8 /* Debt.swift */,
+				D9A6A18D28CDD8B200A2E7F8 /* Assets.xcassets */,
+				D9A6A18F28CDD8B300A2E7F8 /* Preview Content */,
+			);
+			path = "Banker Collab App";
+			sourceTree = "<group>";
+		};
+		D9A6A18F28CDD8B300A2E7F8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9A6A19028CDD8B300A2E7F8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9A6A18528CDD8B100A2E7F8 /* Banker Collab App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9A6A19428CDD8B300A2E7F8 /* Build configuration list for PBXNativeTarget "Banker Collab App" */;
+			buildPhases = (
+				D9A6A18228CDD8B100A2E7F8 /* Sources */,
+				D9A6A18328CDD8B100A2E7F8 /* Frameworks */,
+				D9A6A18428CDD8B100A2E7F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Banker Collab App";
+			packageProductDependencies = (
+			);
+			productName = "Banker Collab App";
+			productReference = D9A6A18628CDD8B100A2E7F8 /* Banker Collab App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9A6A17E28CDD8B100A2E7F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					D9A6A18528CDD8B100A2E7F8 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = D9A6A18128CDD8B100A2E7F8 /* Build configuration list for PBXProject "Banker Collab App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9A6A17D28CDD8B100A2E7F8;
+			packageReferences = (
+				D9CB9D2D28D0505E00442A4D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+			);
+			productRefGroup = D9A6A18728CDD8B100A2E7F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9A6A18528CDD8B100A2E7F8 /* Banker Collab App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9A6A18428CDD8B100A2E7F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A6A19128CDD8B300A2E7F8 /* Preview Assets.xcassets in Resources */,
+				D9A6A18E28CDD8B200A2E7F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9A6A18228CDD8B100A2E7F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93F236428CF76C10057F79E /* TransactionDetailsView.swift in Sources */,
+				D9A6A19828CDDA3800A2E7F8 /* HomeView.swift in Sources */,
+				D9A6A18C28CDD8B100A2E7F8 /* ContentView.swift in Sources */,
+				D93F236628CF85020057F79E /* Tag.swift in Sources */,
+				D9A6A19C28CDE0A200A2E7F8 /* Debt.swift in Sources */,
+				D9AABC5928D82942006AA8FF /* AddTransactionView.swift in Sources */,
+				D9A6A18A28CDD8B100A2E7F8 /* Banker_Collab_AppApp.swift in Sources */,
+				D9A6A19A28CDDB0100A2E7F8 /* ContactsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9A6A19228CDD8B300A2E7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9A6A19328CDD8B300A2E7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9A6A19528CDD8B300A2E7F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Banker Collab App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Benson.Banker-Collab-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9A6A19628CDD8B300A2E7F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Banker Collab App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Benson.Banker-Collab-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9A6A18128CDD8B100A2E7F8 /* Build configuration list for PBXProject "Banker Collab App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9A6A19228CDD8B300A2E7F8 /* Debug */,
+				D9A6A19328CDD8B300A2E7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9A6A19428CDD8B300A2E7F8 /* Build configuration list for PBXNativeTarget "Banker Collab App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9A6A19528CDD8B300A2E7F8 /* Debug */,
+				D9A6A19628CDD8B300A2E7F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9CB9D2D28D0505E00442A4D /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = D9A6A17E28CDD8B100A2E7F8 /* Project object */;
+}
