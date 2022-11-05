@@ -17,6 +17,7 @@ struct AddTransactionView: View {
     var body: some View {
         NavigationView {
             List {
+                // you can type in stuff and anything, but none of buttons work, just placeholders
                 Section {
                     TextField("", text: $title, prompt: Text("Title"))
                     Button {

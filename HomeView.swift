@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    // ignore this stuff for now, it was left halfway to work on UI
     @State var debts = [
         Debt(money: 420.69, collector: "Mr. Tan", debtor: "me", debtor2: "Mr. Lee", appliedTags: [1, 3], daysDueFromNow: 3),
         Debt(money: 32, collector: "Ah Fan", debtor: "me", debtor2: "Mrs. Koo", appliedTags: [0], daysDueFromNow: 9)
@@ -35,18 +35,23 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
+                // made a section to separate search bar
                 Section {
+                    // what you want to search
                     TextField("", text: $searchTerm, prompt: Text("Search for something"))
                         .padding(.leading, 30)
                         .disableAutocorrection(true)
                         .overlay(
+                            // magnifying glass as PLACEHOLDER, search feature is not UI, so not prioritised
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.gray)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         )
                 }
+                // ScrollView to hold all the tags (scroll horizontally)
                 ScrollView(.horizontal) {
                     HStack(spacing: 7) {
+                        // all the tags(sample tags in variables up there)
                         ForEach(tags) { tag in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 12.5)
@@ -70,7 +75,9 @@ struct HomeView: View {
                     }
                     .padding(.bottom, 10)
                 }
+                // outstanding debts
                 Section(header: Text("OUTSTANDING")) {
+                    // sample debts up there
                     ForEach(debts) { debt in
                         Button {
                             showTransactionDetailsSheet.toggle()
@@ -95,7 +102,9 @@ struct HomeView: View {
                         }
                     }
                 }
+                // debts due in a week (repeats as a highlight)
                 Section(header: Text("DUE IN NEXT 7 DAYS")) {
+                    // takes from debtsDueInAWeek[], after UI finished, will add function to append normal debts to debtsDueInAWeek[] after a certain time
                     ForEach(debtsDueInAWeek) { debt in
                         Button {
                             showTransactionDetailsSheet.toggle()
@@ -118,20 +127,22 @@ struct HomeView: View {
                 }
             }
             .navigationTitle("Home")
+            // lets you see the add and filter buttons at the top right
             .toolbar {
                 HStack {
                     Button {
                         showAddTransactionSheet.toggle()
+                        print("button tapped")
                     } label: {
                         Image(systemName: "plus.app")
+                    }
+                    .sheet(isPresented: $showAddTransactionSheet) {
+                        AddTransactionView()
                     }
                     Button {
                         print("filter search")
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
-                    }
-                    .sheet(isPresented: $showAddTransactionSheet) {
-                        AddTransactionView()
                     }
                 }
                 .font(.system(size: 23))
@@ -139,7 +150,22 @@ struct HomeView: View {
             }
         }
     }
-    
+    /*
+     haven't implemented this yet, returns days passed to update the due date on a certain debt.
+     it was supposed to be used like this:
+     
+     whenAppOpened {
+        debt.daysDueFromNow -= dayDifference(notUpdatedDay: lastCheckedDay, notUpdatedMonth: lastCheckedMonth, notUpdatedYear: lastCheckedYear)
+     }
+     whenAppClosed {
+        lastCheckedDay = calendar.component(.day, from: date)
+        lastCheckedMonth = calendar.component(.month, from: date)
+        lastCheckedYear = calendar.component(.year, from: date)
+     }
+     
+     when app opened, it will subtract the days left before due date
+     when app closed, save the last checked date so can use the dayDifference() function
+     */
     func dayDifference(notUpdatedDay: Int, notUpdatedMonth: Int, notUpdatedYear: Int) -> Int {
         // set date variables
         let date = Date()

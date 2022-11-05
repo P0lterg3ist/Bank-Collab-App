@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContactsView: View {
     var body: some View {
+        // not started on this
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }

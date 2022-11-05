@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-import WrappingHStack
 
 struct TransactionDetailsView: View {
-    
+    // @Environment variable to dismiss the sheet
     @Environment (\.dismiss) var dismiss
 
     var body: some View {
         NavigationView {
             List {
+                // shows the tags applied
                 Section(header: Text("TRANSACTION TYPE")) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12.5)
@@ -35,6 +35,7 @@ struct TransactionDetailsView: View {
                             .padding(.leading, 20)
                     }
                 }
+                // placeholders
                 Section(header: Text("UNPAID")) {
                     Text("Unpaid people")
                 }
@@ -43,6 +44,7 @@ struct TransactionDetailsView: View {
                 }
             }
         }
+        // "close" button
         Button {
             dismiss()
         } label: {
